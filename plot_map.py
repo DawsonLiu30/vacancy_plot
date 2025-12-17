@@ -9,7 +9,7 @@ from matplotlib.colors import TwoSlopeNorm
 ANCHOR_EF = 0.67
 
 # ================= 1. 讀取結構 =================
-def fix_poscar_header(input_file="poscar.txt", output_file="POSCAR_fixed"):
+def fix_poscar_header(input_file="poscar.vasp", output_file="POSCAR_fixed"):
     clean_header_template = """Al
 1.0
  40.0000000000000000    0.0000000000000000    0.0000000000000000
