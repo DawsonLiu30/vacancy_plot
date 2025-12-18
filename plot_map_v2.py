@@ -9,6 +9,10 @@ import sys
 ANCHOR_EF = 0.67
 
 def handle_symmetry(atoms):
+    """"
+    # todo
+    ADD Documentation
+    """
     pos = atoms.get_positions()
     cx, cy = np.mean(pos[:, 0]), np.mean(pos[:, 1])
     r_dist = np.sqrt((pos[:, 0] - cx)**2 + (pos[:, 1] - cy)**2)
@@ -20,6 +24,10 @@ def handle_symmetry(atoms):
     return r_dist, theta_fold, d_surf
 
 def get_colors(atoms, df):
+    """"
+       # todo
+       ADD Documentation
+    """
     _, theta_fold, d_surf = handle_symmetry(atoms)
     mapped_values = np.zeros(len(atoms))
     
@@ -37,6 +45,10 @@ def get_colors(atoms, df):
     return mapped_values
 
 def plot_vacancy_and_structure(file_name_vasp, csv_path):
+    """"
+       # todo
+       ADD Documentation
+    """
     if not os.path.exists(file_name_vasp) or not os.path.exists(csv_path):
         return
 
